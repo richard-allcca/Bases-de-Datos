@@ -1,0 +1,62 @@
+VARCHAR:
+	Cadena de caracteres variables de 0 a 255.
+TINYINT():
+	Valor entero pequeño de 0 a 255 o de -128 a 127
+BIT
+BOOL
+BOOLEAN:	 Todos estos tipos son sinónimos de TINYINT(1).
+SMALLINT:
+	Entero corto entre -32768 y 32767 o, en caso de no tener un signo de 0 a 65535.
+MEDIUMINT:
+	Entero de tamaño medio entre -83888608 y 8388607 y entre 0 y 16777215 sin signo.
+INT/INTEGER:
+	Entero de tamaño normal entre -2147483648 y 2147483647 o entre 0 y 4294967295.
+BIGINT:
+	Entero grande entre -9223372036854775808 a 922337203685477807 con signo o de 0 a 18446744073709551615 sin signo.
+FLOAT/FLOAT():
+	Número de coma flotante. Opcionalmente puede acompañarse (al tipo float sin paréntesis) de la palabra precisión que le indica la precisión decimal que se desea, que puede llegar hasta 24 para precisión sencilla y de 25 a 53 para una precisión doble. Para float(), los valores permitidos van desde -3402823466E+38 y -1.175494351E-38, 0, y entre 1.175494351E+38 y 3.402823466E+38. En caso de especificarse el modificador UNSIGNED los valores negativos no son permitidos.
+DOUBLE:
+	Número de coma flotante de precisión normal. Sus valores van desde -1.7976931348623157E+308 y -2.2250738585072014E-308, 0, y entre 2.2250738585072014E-308 y 1.7976931348623157E+308. Una vez más, si se define UNSIGNED, los valores negativos no son permitidos.
+
+DOUBLE PRECISIÓN
+REAL :
+	 Son sinónimos de DOUBLE
+DECIMAL:
+	Número de coma flotante sin empaquetar. Sin empaquetar quiere decir que se guarda como una cadena (véase CHAR), usando un carácter para dígito del valor.
+DEC
+NUMERIC
+FIXED :
+	Sinónimos de DECIMAL
+DATE:
+	Valor de fecha, los rangos permitidos son desde ‘1000-01-01’ y ‘9999-12-31’. El formato de fecha presentado es ‘AAAA-MM-DD’
+DATETIME:
+	Mezcla de fecha y hora. El rango que MySQL soporta es desde ‘1000-01-01 00:00:00’ hasta ‘9999-12-31 23:59:59’. El formato es del tipo ‘AAAA-MM-DD HH:MM:SS’
+TIMESTAMP:
+	Valor de tiempo que puede comprender desde -1970-01-01 00:00:00’ hasta el año 2037.
+TIME:
+	Hora que permite los valores ‘-838:59:59’ a ‘838:59:59’. Los valores se muestran en formato HH:MM:SS
+YEAR:
+	Año en formato de 2 o 4 dígitos, siendo el valor por defecto 4. Los valores permitidos son desde 1901 a 2155 y 0000 en el formato de 4 dígitos y desde 1970 a 2069 en el formato de 2 dígitos (70-69).
+
+Los siguientes tipos son para datos sin tipo o grandes cantidades de datos.
+ 
+TINYBLOB
+TINYTEXT:
+	Columna BLOB o TEXT con una longitud de hasta 255 caracteres (28-1)
+BLOB
+TEXT:
+	Columna BLOB o TEXT con una longitud de hasta 65535 caracteres (216-1)
+MEDIUMBLOB
+MEDIUMTEXT:
+	Columna BLOB o TEXT con una longitud de hasta 16777215 caracteres (224-1)
+LONGBLOB
+LONGTEXT:
+	Columna BLOB o TEXT con una longitud de hasta 4294967298 caracteres (232-1)
+
+Los siguientes son los tipos enumerados y los conjuntos:
+ 
+ENUM:
+	Valor enumerado, el cual es un objeto cadena que puede ser un valor de una lista, un valor NULL o un valor de error “”. Este valor puede tener un máximo de 65535 valores diferentes.
+SET:
+	Conjunto. Es una cadena que puede tener 0 ó más valores. Todos esos valores debe estar entre una lista de valores. El máximo de miembros de un conjunto puede ser 64.
+
